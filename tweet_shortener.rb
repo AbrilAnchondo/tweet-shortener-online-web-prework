@@ -17,7 +17,7 @@ def word_substituter(string)
  string = string.split(" ")
  string.collect do |word|
   dictionary.collect do |key, value|
-     if word == key
+     if word.downcase == key
        word.replace(value)
      end
    end
